@@ -1,0 +1,18 @@
+{
+  "name": "movie_info",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "title": {"type": "string", "description": "Название фильма"},
+      "rating_kp": {"type": "string", "description": "Рейтинг на Кинопоиске"},
+      "rating_imdb": {"type": "string", "description": "Рейтинг на IMDb"},
+      "year": {"type": "string", "description": "Год выпуска"},
+      "country": {"type": "string", "description": "Страна производства"},
+      "duration": {"type": "string", "description": "Длительность фильма"},
+      "description": {"type": "string", "description": "Краткое описание фильма"},
+      "director": {"type": "string", "description": "Режиссёр"},
+      "actors": {"type": "array", "items": {"type": "string"}, "description": "Список актёров"}
+    },
+    "required": ["title", "rating_kp", "rating_imdb", "year", "country", "duration", "description"]
+  }
+}
