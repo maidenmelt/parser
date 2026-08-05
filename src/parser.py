@@ -114,6 +114,13 @@ def parse_movie(html):
         description = desc_div.text.strip() if desc_div else None
     else:
         description = None
+
+    # Жанры
+    genres = []
+    genres_block = soup.find('div', class_='nd-flex')
+    if genres_block:
+        genre_links = genres_block.find_all('a')
+        genres = [genre.text.strip() for genre in genre_links]
     
     return {
         'title': title,
@@ -122,6 +129,7 @@ def parse_movie(html):
         'year': year,
         'country': country,
         'duration': duration,
+        'genres': genres,
         'description': description,
     }
 

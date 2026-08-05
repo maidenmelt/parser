@@ -9,10 +9,11 @@
       "year": {"type": "string", "description": "Год выпуска"},
       "country": {"type": "string", "description": "Страна производства"},
       "duration": {"type": "string", "description": "Длительность фильма"},
+      "genres": {"type": "array", "items": {"type": "string"}},
       "description": {"type": "string", "description": "Краткое описание фильма"},
       "director": {"type": "string", "description": "Режиссёр"},
       "actors": {"type": "array", "items": {"type": "string"}, "description": "Список актёров"}
     },
-    "required": ["title", "rating_kp", "rating_imdb", "year", "country", "duration", "description"]
+    "required": ["title", "rating_kp", "rating_imdb", "year", "country", "duration", "genres", "description"]
   }
 }
